@@ -1,273 +1,128 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZAG Mayden - CV</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-    <style>
-        body {
-            font-family: 'Press Start 2P', cursive;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
 
-        .home {
-            background: url('https://example.com/video-game-background.jpg') no-repeat center center fixed; /* Remplacez par une belle image de fond */
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: black; /* Changement de couleur du texte en noir */
-            text-align: center;
-            animation: fadeIn 1s;
-        }
+    h1 {
+      text-align: center;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    .case {
+      width: 200px;
+      height: 50px;
+      background-color: #007bff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px auto;
+    }
 
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
+    .case:hover {
+      background-color: #0056b3;
+    }
 
-        .btn-launch {
-            background-color: #FFCC00;
-            color: #000;
-            font-size: 24px;
-            padding: 20px 40px;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            cursor: pointer;
-        }
+    .details {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      background: white;
+    }
 
-        .btn-launch:hover {
-            background-color: #FFAA00;
-        }
-
-        .cv {
-            display: none;
-            background-color: #f0f0f0;
-            color: #333;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.5s;
-            height: 100vh;
-            overflow-y: auto;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-
-        .header {
-            background-color: #007BFF;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            margin-bottom: 20px;
-            border-radius: 0 0 10px 10px;
-        }
-
-        .section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #007BFF;
-        }
-
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            color: #aaaaaa;
-        }
-
-        .box {
-            background-color: #007BFF;
-            color: white;
-            border-radius: 10px;
-            padding: 40px;
-            margin: 10px;
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            height: 150px; /* Fixe la hauteur des boîtes pour un affichage uniforme */
-            position: relative; /* Ajouté pour positionner le texte */
-        }
-
-        .box h2 {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.5em;
-            color: white; /* Texte blanc pour une meilleure lisibilité */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre portée pour améliorer la lisibilité */
-        }
-
-        .box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Modal styles */
-        .modal-header, .modal-body {
-            background-color: #007BFF;
-            color: white;
-        }
-
-        .modal-title {
-            font-family: 'Press Start 2P', cursive;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 576px) {
-            h1 {
-                font-size: 2.5em;
-            }
-            .btn-launch {
-                font-size: 18px;
-                padding: 15px 30px;
-            }
-            .header {
-                padding: 20px 0;
-            }
-            .section {
-                padding: 15px;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            .box {
-                padding: 30px; /* Ajustement pour mobile */
-            }
-        }
-    </style>
+    .details h3 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
+  <h1>Bienvenue sur mon site</h1>
 
-<!-- Page d'accueil -->
-<div class="home" id="home">
-    <h1>Bienvenue dans l'univers d'AZAG Mayden</h1>
-    <p>Appuyez sur le bouton pour accéder à votre CV !</p>
-    <button class="btn-launch" id="launchBtn">Lancer</button>
-</div>
+  <div class="case" data-category="experience">Expérience</div>
+  <div class="case" data-category="competence">Compétences Professionnelles</div>
+  <div class="case" data-category="diplomes">Diplômes</div>
+  <div class="case" data-category="qualites">Qualités</div>
+  <div class="case" data-category="langues">Langues</div>
+  <div class="case" data-category="informations">Informations Personnelles</div>
 
-<!-- Section CV -->
-<div id="cv" class="cv">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand mx-auto" href="#">AZAG Mayden</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">Expérience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#competences">Compétences</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#diplomes">Diplômes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#qualites">Qualités</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#langues">Langues</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <div class="details" id="details">
+    <h3>Détails</h3>
+    <div id="details-content">Cliquez sur une case pour afficher les détails ici.</div>
+  </div>
 
-    <div class="header">
-        <h1>AZAG Mayden</h1>
-        <h3>Étudiant en alternance en cybersécurité informatique et réseaux</h3>
-        <p>(Rythme : 1 semaine école / 1 semaine entreprise)</p>
-    </div>
+  <script>
+    const data = {
+      experience: `
+        <strong>Programmation informatique</strong> (Archivage et stockage de fichier) 2022-2023 :
+        <ul>
+          <li>Étude du besoin</li>
+          <li>Mise en place d’une solution technique permettant de déplacer des fichiers sources vers une destination cible avec modification du format</li>
+          <li>Gestion de l’archivage des fichiers (Python)</li>
+        </ul>
+        <strong>Projet informatique</strong> (Serre automatique) 2022-2023 :
+        <ul>
+          <li>Création d’une serre automatique : Étude du besoin et mise en place technique de la solution (Arduino, Python)</li>
+        </ul>
+        <strong>Création Site Web</strong> 2021-2022 :
+        <ul>
+          <li>Découverte de HTML / CSS pour une création de site internet.</li>
+        </ul>
+      `,
+      competence: `
+        <ul>
+          <li><strong>Montage vidéo (Pro)</strong> : Adobe Premier Pro, Adobe After Effect</li>
+        </ul>
+      `,
+      diplomes: `
+        <strong>Lycée Etienne Mimard</strong>
+        <ul>
+          <li>Baccalauréat Général Scientifique (Mathématique - Science de l’ingénieur) 2022-2023</li>
+        </ul>
+      `,
+      qualites: `
+        <ul>
+          <li>Esprit d'équipe</li>
+          <li>Rigueur</li>
+          <li>Dynamisme</li>
+          <li>Assiduité</li>
+        </ul>
+      `,
+      langues: `
+        <ul>
+          <li>Français</li>
+          <li>Anglais (B2)</li>
+        </ul>
+      `,
+      informations: `
+        <ul>
+          <li>Numéro tel : 12.34.56.78</li>
+          <li>Âge : 19 ans</li>
+          <li>Mail : maydenazag@gmail.com</li>
+          <li>Adresse : 4 rue des balivernes</li>
+        </ul>
+      `
+    };
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="box" data-toggle="modal" data-target="#experienceModal">
-                    <h2>Expérience</h2>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box" data-toggle="modal" data-target="#competencesModal">
-                    <h2>Compétences</h2>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box" data-toggle="modal" data-target="#diplomesModal">
-                    <h2>Diplômes</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="box" data-toggle="modal" data-target="#qualitesModal">
-                    <h2>Qualités</h2>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box" data-toggle="modal" data-target="#languesModal">
-                    <h2>Langues</h2>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box" data-toggle="modal" data-target="#contactModal">
-                    <h2>Contact</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+    const cases = document.querySelectorAll('.case');
+    const detailsContent = document.getElementById('details-content');
 
-    <footer>
-        <p>&copy; 2024 AZAG Mayden. Tous droits réservés.</p>
-    </footer>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    document.getElementById('launchBtn').addEventListener('click', function() {
-        const home = document.getElementById('home');
-        const cv = document.getElementById('cv');
-
-        // Animation de sortie de la page d'accueil
-        home.style.animation = 'fadeOut 0.5s forwards';
-
-        setTimeout(() => {
-            home.style.display = 'none';
-            cv.style.display = 'block';
-            cv.style.transition = 'opacity 0.5s';
-            cv.style.opacity = '1';
-        }, 500);
+    cases.forEach(caseEl => {
+      caseEl.addEventListener('click', () => {
+        const category = caseEl.dataset.category;
+        detailsContent.innerHTML = data[category] || 'Aucune information disponible.';
+      });
     });
-
-    document.getElementById('cv').style.opacity = '0';
-    document.getElementById('cv').style.display = 'none';
-</script>
+  </script>
 </body>
 </html>
