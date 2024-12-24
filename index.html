@@ -4,140 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZAG Mayden - CV</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: 'Press Start 2P', cursive;
-            background-color: black;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007BFF;
             color: white;
-            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
         }
 
         .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
             margin: 20px auto;
-            max-width: 800px;
         }
 
-        .case {
-            background-color: blue;
+        .box {
+            background-color: #007BFF;
             color: white;
             text-align: center;
             padding: 20px;
-            margin: 10px 0;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: transform 0.2s ease;
         }
 
-        .case:hover {
-            background-color: darkblue;
+        .box:hover {
+            transform: scale(1.05);
         }
 
         .details {
             display: none;
-            background-color: #333;
-            color: white;
+            margin: 20px auto;
             padding: 20px;
-            border-radius: 10px;
-            margin-top: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
         }
 
         footer {
             text-align: center;
-            margin-top: 30px;
-            color: gray;
+            margin: 20px 0;
+            color: #aaaaaa;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center">AZAG Mayden - CV</h1>
 
-        <!-- Expérience -->
-        <div class="case" data-category="experience">Expérience</div>
-        <div class="details" id="experience-details">
-            <p><strong>Programmation informatique</strong> (Archivage et stockage de fichier) 2022-2023 :</p>
-            <ul>
-                <li>Étude du besoin</li>
-                <li>Mise en place d’une solution technique permettant de déplacer des fichiers sources vers une destination cible avec modification du format</li>
-                <li>Gestion de l’archivage des fichiers (Python)</li>
-            </ul>
-            <p><strong>Projet informatique</strong> (Serre automatique) 2022-2023 :</p>
-            <ul>
-                <li>Création d’une serre automatique : Étude du besoin et mise en place technique de la solution (Arduino, Python)</li>
-            </ul>
-            <p><strong>Création Site Web</strong> 2021-2022 :</p>
-            <ul>
-                <li>Découverte de HTML / CSS pour une création de site internet.</li>
-            </ul>
-        </div>
+<header>
+    <h1>AZAG Mayden</h1>
+    <p>Étudiant en alternance en cybersécurité informatique et réseaux</p>
+    <p>(Rythme : 1 semaine école / 1 semaine entreprise)</p>
+</header>
 
-        <!-- Compétences -->
-        <div class="case" data-category="competences">Compétences</div>
-        <div class="details" id="competences-details">
-            <ul>
-                <li><strong>Montage vidéo (Pro)</strong> : Adobe Premier Pro, Adobe After Effect</li>
-            </ul>
-        </div>
+<nav>
+    <a href="#experience">Expérience</a>
+    <a href="#competences">Compétences</a>
+    <a href="#diplomes">Diplômes</a>
+    <a href="#qualites">Qualités</a>
+    <a href="#langues">Langues</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-        <!-- Diplômes -->
-        <div class="case" data-category="diplomes">Diplômes</div>
-        <div class="details" id="diplomes-details">
-            <p><strong>Lycée Etienne Mimard</strong></p>
-            <ul>
-                <li>Baccalauréat Général Scientifique (Mathématiques - Sciences de l’ingénieur) 2022-2023</li>
-            </ul>
-        </div>
+<div class="container">
+    <div class="box" onclick="showDetails('experienceDetails')">Expérience</div>
+    <div class="box" onclick="showDetails('competencesDetails')">Compétences</div>
+    <div class="box" onclick="showDetails('diplomesDetails')">Diplômes</div>
+    <div class="box" onclick="showDetails('qualitesDetails')">Qualités</div>
+    <div class="box" onclick="showDetails('languesDetails')">Langues</div>
+    <div class="box" onclick="showDetails('contactDetails')">Contact</div>
+</div>
 
-        <!-- Qualités -->
-        <div class="case" data-category="qualites">Qualités</div>
-        <div class="details" id="qualites-details">
-            <ul>
-                <li>Esprit d'équipe</li>
-                <li>Rigueur</li>
-                <li>Dynamisme</li>
-                <li>Assiduité</li>
-            </ul>
-        </div>
+<div id="experienceDetails" class="details">
+    <h2>Expérience</h2>
+    <p><strong>Programmation informatique</strong> (2022-2023):</p>
+    <ul>
+        <li>Étude du besoin</li>
+        <li>Mise en place d'une solution technique</li>
+        <li>Gestion de l'archivage des fichiers</li>
+    </ul>
+</div>
 
-        <!-- Langues -->
-        <div class="case" data-category="langues">Langues</div>
-        <div class="details" id="langues-details">
-            <ul>
-                <li>Français</li>
-                <li>Anglais (B2)</li>
-            </ul>
-        </div>
+<div id="competencesDetails" class="details">
+    <h2>Compétences</h2>
+    <ul>
+        <li>Montage vidéo avec Adobe Premiere Pro</li>
+        <li>Maîtrise de Python et Arduino</li>
+    </ul>
+</div>
 
-        <!-- Contact -->
-        <div class="case" data-category="contact">Informations Personnelles</div>
-        <div class="details" id="contact-details">
-            <ul>
-                <li>Numéro tel : 12.34.56.78</li>
-                <li>Âge : 19 ans</li>
-                <li>Mail : maydenazag@gmail.com</li>
-                <li>Adresse : 4 rue des balivernes</li>
-            </ul>
-        </div>
-    </div>
+<div id="diplomesDetails" class="details">
+    <h2>Diplômes</h2>
+    <p>Baccalauréat Général Scientifique - Lycée Étienne Mimard (2022-2023)</p>
+</div>
 
-    <footer>
-        <p>© 2024 AZAG Mayden - Tous droits réservés</p>
-    </footer>
+<div id="qualitesDetails" class="details">
+    <h2>Qualités</h2>
+    <ul>
+        <li>Esprit d'équipe</li>
+        <li>Rigueur</li>
+        <li>Dynamisme</li>
+        <li>Assiduité</li>
+    </ul>
+</div>
 
-    <script>
-        // Gestion de l'affichage des détails
-        document.querySelectorAll('.case').forEach(caseElement => {
-            caseElement.addEventListener('click', function() {
-                const category = this.dataset.category;
-                const detailsElement = document.getElementById(`${category}-details`);
+<div id="languesDetails" class="details">
+    <h2>Langues</h2>
+    <p>Français - Anglais (B2)</p>
+</div>
 
-                // Basculer l'affichage des détails
-                const isVisible = detailsElement.style.display === 'block';
-                document.querySelectorAll('.details').forEach(el => el.style.display = 'none');
-                detailsElement.style.display = isVisible ? 'none' : 'block';
-            });
-        });
-    </script>
+<div id="contactDetails" class="details">
+    <h2>Contact</h2>
+    <p>Téléphone: 12.34.56.78</p>
+    <p>Email: maydenazag@gmail.com</p>
+    <p>Adresse: 4 rue des Balivernes</p>
+</div>
+
+<footer>
+    &copy; 2024 AZAG Mayden. Tous droits réservés.
+</footer>
+
+<script>
+    function showDetails(id) {
+        // Masquer tous les détails
+        const details = document.querySelectorAll('.details');
+        details.forEach(detail => detail.style.display = 'none');
+
+        // Afficher la section sélectionnée
+        const selectedDetail = document.getElementById(id);
+        if (selectedDetail) {
+            selectedDetail.style.display = 'block';
+        }
+    }
+</script>
+
 </body>
 </html>
