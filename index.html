@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZAG Mayden - CV</title>
+    <!-- Framework CSS Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- FontAwesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <!-- Meta Description pour SEO -->
+    <meta name="description" content="Découvrez le CV de AZAG Mayden, étudiant en alternance spécialisé en cybersécurité informatique et réseaux.">
+    <!-- Meta Keywords pour SEO -->
+    <meta name="keywords" content="AZAG Mayden, cybersécurité, informatique, réseaux, étudiant alternance, CV">
     <style>
         body {
             font-family: 'Press Start 2P', cursive;
             margin: 0;
             padding: 0;
+            background-color: #000;
+            color: #fff;
         }
 
         .home {
             background-color: #000;
-            color: #fff;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -37,16 +45,27 @@
 
         .cv {
             display: none;
-            background-color: #f0f0f0;
+            background-color: #f9f9f9;
+            color: #333;
             height: 100vh;
             overflow-y: auto;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Contenu initial visible -->
     <noscript>
-        <div style="background-color: #000; color: #fff; text-align: center; padding: 20px;">
+        <div style="background-color: #ffffff; color: #fff; text-align: center; padding: 20px;">
             Activez JavaScript pour afficher cette page correctement.
         </div>
     </noscript>
@@ -60,7 +79,7 @@
 
     <!-- Section CV -->
     <div id="cv" class="cv">
-        <header class="bg-primary text-white text-center py-4">
+        <header>
             <h1>AZAG Mayden</h1>
             <p>Étudiant en alternance en cybersécurité informatique et réseaux</p>
         </header>
@@ -80,19 +99,27 @@
             </div>
         </nav>
 
-        <!-- Contenu du CV -->
         <div class="container mt-4">
             <section id="experience">
                 <h2>Expérience</h2>
-                <p>...</p>
+                <p>Décrivez ici vos expériences professionnelles ou académiques.</p>
             </section>
             <section id="competences">
                 <h2>Compétences</h2>
-                <p>...</p>
+                <p>Listez vos compétences techniques et personnelles.</p>
+            </section>
+            <section id="diplomes">
+                <h2>Diplômes</h2>
+                <p>Indiquez vos diplômes obtenus et leur année d'obtention.</p>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Ajoutez vos informations de contact.</p>
             </section>
         </div>
     </div>
 
+    <!-- Scripts -->
     <script>
         document.getElementById('launchBtn').addEventListener('click', function () {
             const home = document.getElementById('home');
