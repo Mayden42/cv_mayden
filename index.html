@@ -3,109 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AZAG Mayden - CV</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-    <style>
-        body {
-            font-family: 'Press Start 2P', cursive;
-            overflow: hidden;
-        }
-
-        .home {
-            background: url('https://example.com/video-game-background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            text-align: center;
-            animation: fadeIn 1s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
-
-        .btn-launch {
-            background-color: #FFCC00;
-            color: #000;
-            font-size: 24px;
-            padding: 20px 40px;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            cursor: pointer;
-        }
-
-        .btn-launch:hover {
-            background-color: #FFAA00;
-        }
-
-        .cv {
-            display: none;
-            background-color: #f0f0f0;
-            color: #333;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.5s;
-            height: 100vh;
-            overflow-y: auto;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-
-        .header {
-            background-color: #007BFF;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            margin-bottom: 20px;
-            border-radius: 0 0 10px 10px;
-        }
-
-        .section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #007BFF;
-        }
-
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            color: #aaaaaa;
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
+    
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AZAG Mayden - CV</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+        <style>
+            body {
+                font-family: 'Press Start 2P', cursive;
+                overflow: hidden;
+            }
+    
+            .home {
+                background: url('https://example.com/video-game-background.jpg') no-repeat center center fixed; /* Remplacez par une belle image de fond */
+                background-size: cover;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: black; /* Changement de couleur du texte en noir */
+                text-align: center;
+                animation: fadeIn 1s;
+            }
+    
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+    
+            @keyframes fadeOut {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+    
+            .btn-launch {
+                background-color: #FFCC00;
+                color: #000;
+                font-size: 24px;
+                padding: 20px 40px;
+                border: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                cursor: pointer;
+            }
+    
+            .btn-launch:hover {
+                background-color: #FFAA00;
+            }
+    
+            .cv {
+                display: none;
+                background-color: #f0f0f0;
+                color: #333;
+                padding: 20px;
+                opacity: 0;
+                transition: opacity 0.5s;
+                height: 100vh;
+                overflow-y: auto;
+            }
+    
+            .navbar {
+                background-color: #343a40;
+            }
+    
+            .navbar-nav .nav-link {
+                color: #ffffff;
+            }
+    
+            .header {
+                background-color: #007BFF;
+                color: white;
+                padding: 40px 0;
+                text-align: center;
+                margin-bottom: 20px;
+                border-radius: 0 0 10px 10px;
+            }
+    
+            .section {
+                background-color: white;
+                border-radius: 10px;
+                padding: 20px;
+                margin: 10px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            h2 {
+                color: #007BFF;
+            }
+    
+            footer {
+                text-align: center;
+                margin: 20px 0;
+                color: #aaaaaa;
+            }
+    
+            .box {
+                background-color: #007BFF;
+                color: white;
+                border-radius: 10px;
+                padding: 40px;
+                margin: 10px;
+                text-align: center;
+                cursor: pointer;
+                transition: transform 0.3s, box-shadow 0.3s;
+                height: 150px; /* Fixe la hauteur des boîtes pour un affichage uniforme */
+                position: relative; /* Ajouté pour positionner le texte */
+            }
+    
+            .box h2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.5em;
+                color: white; /* Texte blanc pour une meilleure lisibilité */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre portée pour améliorer la lisibilité */
+            }
+    
+            .box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+    
+            /* Modal styles */
+            .modal-header, .modal-body {
+                background-color: #007BFF;
+                color: white;
+            }
+    
+            .modal-title {
+                font-family: 'Press Start 2P', cursive;
+            }
+    
+            /* Responsive adjustments */
+            @media (max-width: 576px) {
+                h1 {
+                    font-size: 2.5em;
+                }
+                .btn-launch {
+                    font-size: 18px;
+                    padding: 15px 30px;
+                }
+                .header {
+                    padding: 20px 0;
+                }
+                .section {
+                    padding: 15px;
+                }
+                h2 {
+                    font-size: 1.5em;
+                }
+                .box {
+                    padding: 30px; /* Ajustement pour mobile */
+                }
+            }
+        </style>
+    </head>
+    <body>
+    
     <!-- Page d'accueil -->
     <div class="home" id="home">
         <h1>Bienvenue dans l'univers d'AZAG Mayden</h1>
         <p>Appuyez sur le bouton pour accéder à votre CV !</p>
         <button class="btn-launch" id="launchBtn">Lancer</button>
     </div>
-
+    
     <!-- Section CV -->
     <div id="cv" class="cv">
         <nav class="navbar navbar-expand-lg navbar-dark">
@@ -115,37 +186,232 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#diplomes">Diplômes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#qualites">Qualités</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#langues">Langues</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Expérience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#diplomes">Diplômes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#qualites">Qualités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#langues">Langues</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
         </nav>
-        
+    
         <div class="header">
             <h1>AZAG Mayden</h1>
             <h3>Étudiant en alternance en cybersécurité informatique et réseaux</h3>
             <p>(Rythme : 1 semaine école / 1 semaine entreprise)</p>
         </div>
-
-        <!-- Votre contenu pour le CV ici -->
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box" data-toggle="modal" data-target="#experienceModal">
+                        <h2>Expérience</h2>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box" data-toggle="modal" data-target="#competencesModal">
+                        <h2>Compétences</h2>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box" data-toggle="modal" data-target="#diplomesModal">
+                        <h2>Diplômes</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box" data-toggle="modal" data-target="#qualitesModal">
+                        <h2>Qualités</h2>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box" data-toggle="modal" data-target="#languesModal">
+                        <h2>Langues</h2>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box" data-toggle="modal" data-target="#contactModal">
+                        <h2>Contact</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modals -->
+        <div class="modal fade" id="experienceModal" tabindex="-1" aria-labelledby="experienceModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="experienceModalLabel">Expérience</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Programmation informatique (Archivage et stockage de fichier) - 2022-2023</h4>
+                        <ul>
+                            <li>Étude du besoin</li>
+                            <li>Mise en place d’une solution technique permettant de déplacer des fichiers sources vers une destination cible avec modification du format</li>
+                            <li>Gestion de l’archivage des fichiers (Python)</li>
+                        </ul>
+    
+                        <h4>Projet informatique (Serre automatique) - 2022-2023</h4>
+                        <ul>
+                            <li>Création d’une serre automatique :</li>
+                            <li>Étude du besoin</li>
+                            <li>Mise en place technique de la solution (Arduino, Python)</li>
+                        </ul>
+    
+                        <h4>Création Site Web - 2021-2022</h4>
+                        <ul>
+                            <li>Découverte de HTML/CSS pour la création d’un site internet.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="competencesModal" tabindex="-1" aria-labelledby="competencesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="competencesModalLabel">Compétences</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Montage vidéo (Pro)</h4>
+                        <ul>
+                            <li>Adobe Premiere Pro</li>
+                            <li>Adobe After Effects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="diplomesModal" tabindex="-1" aria-labelledby="diplomesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="diplomesModalLabel">Diplômes</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Lycée Etienne Mimard</h4>
+                        <ul>
+                            <li>Baccalauréat Général Scientifique (Mathématiques - Sciences de l’ingénieur) - 2022-2023</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="qualitesModal" tabindex="-1" aria-labelledby="qualitesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="qualitesModalLabel">Qualités</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Esprit d'équipe</li>
+                            <li>Rigueur</li>
+                            <li>Dynamisme</li>
+                            <li>Assiduité</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="languesModal" tabindex="-1" aria-labelledby="languesModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="languesModalLabel">Langues</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Français</li>
+                            <li>Anglais (B2)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Contact</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>Téléphone : 12.34.56.78</li>
+                            <li>Âge : 19 ans</li>
+                            <li>Email : maydenazag@gmail.com</li>
+                            <li>Adresse : 4 rue des balivernes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <footer>
+            <p>&copy; 2024 AZAG Mayden. Tous droits réservés.</p>
+        </footer>
     </div>
-
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.getElementById('launchBtn').addEventListener('click', function() {
             const home = document.getElementById('home');
             const cv = document.getElementById('cv');
-
+    
+            // Animation de sortie de la page d'accueil
             home.style.animation = 'fadeOut 0.5s forwards';
+    
             setTimeout(() => {
                 home.style.display = 'none';
                 cv.style.display = 'block';
+                cv.style.transition = 'opacity 0.5s';
                 cv.style.opacity = '1';
             }, 500);
         });
+    
+        document.getElementById('cv').style.opacity = '0';
+        document.getElementById('cv').style.display = 'none';
     </script>
-</body>
-</html>
+    </body>
+    </html>
+    
