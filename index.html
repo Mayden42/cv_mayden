@@ -3,78 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Site</title>
+  <title>Mon CV</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f4f4f4;
+      margin: 20px;
     }
 
-    h1 {
-      text-align: center;
+    .section {
+      margin-bottom: 20px;
     }
 
-    .case {
-      width: 200px;
-      height: 50px;
+    .section h2 {
       background-color: #007bff;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 10px;
       border-radius: 5px;
       cursor: pointer;
-      margin: 10px auto;
     }
 
-    .case:hover {
-      background-color: #0056b3;
-    }
-
-    .details {
-      margin-top: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    .section-content {
+      display: none;
       padding: 10px;
-      background: white;
-    }
-
-    .details h3 {
-      margin-top: 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
     }
   </style>
 </head>
 <body>
-  <h1>Bienvenue sur mon site</h1>
+  <div class="section" data-category="experience">
+    <h2>Expérience</h2>
+    <div class="section-content" id="experience-details">
+      <!-- Les détails apparaîtront ici -->
+    </div>
+  </div>
 
-  <div class="case" data-category="experience">Expérience</div>
-  <div class="case" data-category="competence">Compétences Professionnelles</div>
-  <div class="case" data-category="diplomes">Diplômes</div>
-  <div class="case" data-category="qualites">Qualités</div>
-  <div class="case" data-category="langues">Langues</div>
-  <div class="case" data-category="informations">Informations Personnelles</div>
+  <div class="section" data-category="competence">
+    <h2>Compétences Professionnelles</h2>
+    <div class="section-content" id="competence-details">
+      <!-- Les détails apparaîtront ici -->
+    </div>
+  </div>
 
-  <div class="details" id="details">
-    <h3>Détails</h3>
-    <div id="details-content">Cliquez sur une case pour afficher les détails ici.</div>
+  <div class="section" data-category="diplomes">
+    <h2>Diplômes</h2>
+    <div class="section-content" id="diplomes-details">
+      <!-- Les détails apparaîtront ici -->
+    </div>
+  </div>
+
+  <div class="section" data-category="qualites">
+    <h2>Qualités</h2>
+    <div class="section-content" id="qualites-details">
+      <!-- Les détails apparaîtront ici -->
+    </div>
+  </div>
+
+  <div class="section" data-category="langue">
+    <h2>Langues</h2>
+    <div class="section-content" id="langue-details">
+      <!-- Les détails apparaîtront ici -->
+    </div>
+  </div>
+
+  <div class="section" data-category="informations">
+    <h2>Informations Personnelles</h2>
+    <div class="section-content" id="informations-details">
+      <!-- Les détails apparaîtront ici -->
+    </div>
   </div>
 
   <script>
     const data = {
       experience: `
-        <strong>Programmation informatique</strong> (Archivage et stockage de fichier) 2022-2023 :
+        <p><strong>Programmation informatique</strong> (Archivage et stockage de fichier) 2022-2023 :</p>
         <ul>
           <li>Étude du besoin</li>
           <li>Mise en place d’une solution technique permettant de déplacer des fichiers sources vers une destination cible avec modification du format</li>
           <li>Gestion de l’archivage des fichiers (Python)</li>
         </ul>
-        <strong>Projet informatique</strong> (Serre automatique) 2022-2023 :
+        <p><strong>Projet informatique</strong> (Serre automatique) 2022-2023 :</p>
         <ul>
           <li>Création d’une serre automatique : Étude du besoin et mise en place technique de la solution (Arduino, Python)</li>
         </ul>
-        <strong>Création Site Web</strong> 2021-2022 :
+        <p><strong>Création Site Web</strong> 2021-2022 :</p>
         <ul>
           <li>Découverte de HTML / CSS pour une création de site internet.</li>
         </ul>
@@ -85,7 +98,7 @@
         </ul>
       `,
       diplomes: `
-        <strong>Lycée Etienne Mimard</strong>
+        <p><strong>Lycée Etienne Mimard</strong></p>
         <ul>
           <li>Baccalauréat Général Scientifique (Mathématique - Science de l’ingénieur) 2022-2023</li>
         </ul>
@@ -98,7 +111,7 @@
           <li>Assiduité</li>
         </ul>
       `,
-      langues: `
+      langue: `
         <ul>
           <li>Français</li>
           <li>Anglais (B2)</li>
@@ -114,13 +127,15 @@
       `
     };
 
-    const cases = document.querySelectorAll('.case');
-    const detailsContent = document.getElementById('details-content');
+    const sections = document.querySelectorAll('.section');
 
-    cases.forEach(caseEl => {
-      caseEl.addEventListener('click', () => {
-        const category = caseEl.dataset.category;
-        detailsContent.innerHTML = data[category] || 'Aucune information disponible.';
+    sections.forEach(section => {
+      const category = section.dataset.category;
+      const contentDiv = section.querySelector('.section-content');
+
+      section.querySelector('h2').addEventListener('click', () => {
+        contentDiv.innerHTML = data[category];
+        contentDiv.style.display = contentDiv.style.display === 'block' ? 'none' : 'block';
       });
     });
   </script>
