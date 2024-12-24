@@ -8,142 +8,116 @@
     <style>
         body {
             font-family: 'Press Start 2P', cursive;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        .header {
-            background-color: #007BFF;
+            background-color: black;
             color: white;
-            padding: 20px 0;
-            text-align: center;
-            border-radius: 0 0 10px 10px;
-            margin-bottom: 20px;
+            overflow: hidden;
         }
 
-        .section {
-            margin: 20px;
-            text-align: center;
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
         }
 
         .case {
-            background-color: #007BFF;
+            background-color: blue;
             color: white;
-            padding: 10px 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            cursor: pointer;
             text-align: center;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         .case:hover {
-            background-color: #0056b3;
+            background-color: darkblue;
         }
 
         .details {
             display: none;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
             margin-top: 10px;
-            background-color: #ffffff;
-            text-align: left;
         }
 
         footer {
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-            background-color: #333;
-            color: white;
+            margin-top: 30px;
+            color: gray;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>AZAG Mayden</h1>
-        <h3>Étudiant en alternance en cybersécurité</h3>
-        <p>Rythme : 1 semaine école / 1 semaine entreprise</p>
-    </div>
-
     <div class="container">
-        <!-- Section Expérience -->
-        <div class="section">
-            <div class="case" data-category="experience">Expérience</div>
-            <div class="details" id="experience-details">
-                <p><strong>Programmation informatique</strong> (Archivage et stockage de fichier) 2022-2023 :</p>
-                <ul>
-                    <li>Étude du besoin</li>
-                    <li>Mise en place d’une solution technique permettant de déplacer des fichiers sources vers une destination cible avec modification du format</li>
-                    <li>Gestion de l’archivage des fichiers (Python)</li>
-                </ul>
-                <p><strong>Projet informatique</strong> (Serre automatique) 2022-2023 :</p>
-                <ul>
-                    <li>Création d’une serre automatique : Étude du besoin et mise en place technique de la solution (Arduino, Python)</li>
-                </ul>
-                <p><strong>Création Site Web</strong> 2021-2022 :</p>
-                <ul>
-                    <li>Découverte de HTML / CSS pour une création de site internet.</li>
-                </ul>
-            </div>
+        <h1 class="text-center">AZAG Mayden - CV</h1>
+
+        <!-- Expérience -->
+        <div class="case" data-category="experience">Expérience</div>
+        <div class="details" id="experience-details">
+            <p><strong>Programmation informatique</strong> (Archivage et stockage de fichier) 2022-2023 :</p>
+            <ul>
+                <li>Étude du besoin</li>
+                <li>Mise en place d’une solution technique permettant de déplacer des fichiers sources vers une destination cible avec modification du format</li>
+                <li>Gestion de l’archivage des fichiers (Python)</li>
+            </ul>
+            <p><strong>Projet informatique</strong> (Serre automatique) 2022-2023 :</p>
+            <ul>
+                <li>Création d’une serre automatique : Étude du besoin et mise en place technique de la solution (Arduino, Python)</li>
+            </ul>
+            <p><strong>Création Site Web</strong> 2021-2022 :</p>
+            <ul>
+                <li>Découverte de HTML / CSS pour une création de site internet.</li>
+            </ul>
         </div>
 
-        <!-- Section Compétences -->
-        <div class="section">
-            <div class="case" data-category="competence">Compétences</div>
-            <div class="details" id="competence-details">
-                <ul>
-                    <li><strong>Montage vidéo (Pro)</strong> : Adobe Premier Pro, Adobe After Effect</li>
-                </ul>
-            </div>
+        <!-- Compétences -->
+        <div class="case" data-category="competences">Compétences</div>
+        <div class="details" id="competences-details">
+            <ul>
+                <li><strong>Montage vidéo (Pro)</strong> : Adobe Premier Pro, Adobe After Effect</li>
+            </ul>
         </div>
 
-        <!-- Section Diplômes -->
-        <div class="section">
-            <div class="case" data-category="diplomes">Diplômes</div>
-            <div class="details" id="diplomes-details">
-                <p><strong>Lycée Etienne Mimard</strong></p>
-                <ul>
-                    <li>Baccalauréat Général Scientifique (Mathématiques - Sciences de l’ingénieur) 2022-2023</li>
-                </ul>
-            </div>
+        <!-- Diplômes -->
+        <div class="case" data-category="diplomes">Diplômes</div>
+        <div class="details" id="diplomes-details">
+            <p><strong>Lycée Etienne Mimard</strong></p>
+            <ul>
+                <li>Baccalauréat Général Scientifique (Mathématiques - Sciences de l’ingénieur) 2022-2023</li>
+            </ul>
         </div>
 
-        <!-- Section Qualités -->
-        <div class="section">
-            <div class="case" data-category="qualites">Qualités</div>
-            <div class="details" id="qualites-details">
-                <ul>
-                    <li>Esprit d'équipe</li>
-                    <li>Rigueur</li>
-                    <li>Dynamisme</li>
-                    <li>Assiduité</li>
-                </ul>
-            </div>
+        <!-- Qualités -->
+        <div class="case" data-category="qualites">Qualités</div>
+        <div class="details" id="qualites-details">
+            <ul>
+                <li>Esprit d'équipe</li>
+                <li>Rigueur</li>
+                <li>Dynamisme</li>
+                <li>Assiduité</li>
+            </ul>
         </div>
 
-        <!-- Section Langues -->
-        <div class="section">
-            <div class="case" data-category="langues">Langues</div>
-            <div class="details" id="langues-details">
-                <ul>
-                    <li>Français</li>
-                    <li>Anglais (B2)</li>
-                </ul>
-            </div>
+        <!-- Langues -->
+        <div class="case" data-category="langues">Langues</div>
+        <div class="details" id="langues-details">
+            <ul>
+                <li>Français</li>
+                <li>Anglais (B2)</li>
+            </ul>
         </div>
 
-        <!-- Section Contact -->
-        <div class="section">
-            <div class="case" data-category="contact">Informations Personnelles</div>
-            <div class="details" id="contact-details">
-                <ul>
-                    <li>Numéro tel : 12.34.56.78</li>
-                    <li>Âge : 19 ans</li>
-                    <li>Mail : maydenazag@gmail.com</li>
-                    <li>Adresse : 4 rue des balivernes</li>
-                </ul>
-            </div>
+        <!-- Contact -->
+        <div class="case" data-category="contact">Informations Personnelles</div>
+        <div class="details" id="contact-details">
+            <ul>
+                <li>Numéro tel : 12.34.56.78</li>
+                <li>Âge : 19 ans</li>
+                <li>Mail : maydenazag@gmail.com</li>
+                <li>Adresse : 4 rue des balivernes</li>
+            </ul>
         </div>
     </div>
 
@@ -152,13 +126,13 @@
     </footer>
 
     <script>
-        // Ajouter un gestionnaire d'événements pour chaque case
+        // Gestion de l'affichage des détails
         document.querySelectorAll('.case').forEach(caseElement => {
             caseElement.addEventListener('click', function() {
                 const category = this.dataset.category;
                 const detailsElement = document.getElementById(`${category}-details`);
 
-                // Afficher ou masquer les détails
+                // Basculer l'affichage des détails
                 const isVisible = detailsElement.style.display === 'block';
                 document.querySelectorAll('.details').forEach(el => el.style.display = 'none');
                 detailsElement.style.display = isVisible ? 'none' : 'block';
