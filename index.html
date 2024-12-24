@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZAG Mayden - CV</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
     <style>
         body {
             font-family: 'Press Start 2P', cursive;
@@ -148,17 +149,15 @@
 
 <script>
     function showDetails(id) {
-        // Masquer tous les détails
         const details = document.querySelectorAll('.details');
         details.forEach(detail => detail.style.display = 'none');
-
-        // Afficher la section sélectionnée
         const selectedDetail = document.getElementById(id);
         if (selectedDetail) {
             selectedDetail.style.display = 'block';
         }
     }
 </script>
+
 
 </body>
 </html>
