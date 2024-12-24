@@ -10,30 +10,19 @@
     <style>
         body {
             font-family: 'Press Start 2P', cursive;
-            overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
 
         .home {
-            background: url('https://example.com/video-game-background.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #000;
+            color: #fff;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: black;
             text-align: center;
-            animation: fadeIn 1s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
         }
 
         .btn-launch {
@@ -43,62 +32,25 @@
             padding: 20px 40px;
             border: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
             cursor: pointer;
-        }
-
-        .btn-launch:hover {
-            background-color: #FFAA00;
         }
 
         .cv {
             display: none;
             background-color: #f0f0f0;
-            color: #333;
-            padding: 20px;
-            opacity: 0;
-            transition: opacity 0.5s;
             height: 100vh;
             overflow-y: auto;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-
-        .navbar-nav .nav-link {
-            color: #ffffff;
-        }
-
-        .header {
-            background-color: #007BFF;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            margin-bottom: 20px;
-            border-radius: 0 0 10px 10px;
-        }
-
-        .section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #007BFF;
-        }
-
-        footer {
-            text-align: center;
-            margin: 20px 0;
-            color: #aaaaaa;
         }
     </style>
 </head>
 <body>
+    <!-- Contenu initial visible -->
+    <noscript>
+        <div style="background-color: #000; color: #fff; text-align: center; padding: 20px;">
+            Activez JavaScript pour afficher cette page correctement.
+        </div>
+    </noscript>
+
     <!-- Page d'accueil -->
     <div class="home" id="home">
         <h1>Bienvenue dans l'univers d'AZAG Mayden</h1>
@@ -108,43 +60,46 @@
 
     <!-- Section CV -->
     <div id="cv" class="cv">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand mx-auto" href="#">AZAG Mayden</a>
+        <header class="bg-primary text-white text-center py-4">
+            <h1>AZAG Mayden</h1>
+            <p>Étudiant en alternance en cybersécurité informatique et réseaux</p>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Menu</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#experience">Expérience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
                     <li class="nav-item"><a class="nav-link" href="#diplomes">Diplômes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#qualites">Qualités</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#langues">Langues</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
-        
-        <div class="header">
-            <h1>AZAG Mayden</h1>
-            <h3>Étudiant en alternance en cybersécurité informatique et réseaux</h3>
-            <p>(Rythme : 1 semaine école / 1 semaine entreprise)</p>
-        </div>
 
-        <!-- Votre contenu pour le CV ici -->
+        <!-- Contenu du CV -->
+        <div class="container mt-4">
+            <section id="experience">
+                <h2>Expérience</h2>
+                <p>...</p>
+            </section>
+            <section id="competences">
+                <h2>Compétences</h2>
+                <p>...</p>
+            </section>
+        </div>
     </div>
 
     <script>
-        document.getElementById('launchBtn').addEventListener('click', function() {
+        document.getElementById('launchBtn').addEventListener('click', function () {
             const home = document.getElementById('home');
             const cv = document.getElementById('cv');
 
-            home.style.animation = 'fadeOut 0.5s forwards';
-            setTimeout(() => {
-                home.style.display = 'none';
-                cv.style.display = 'block';
-                cv.style.opacity = '1';
-            }, 500);
+            home.style.display = 'none';
+            cv.style.display = 'block';
         });
     </script>
 </body>
